@@ -14,8 +14,8 @@ RUN apt-get update && \
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN mkdir git-lfs
-RUN wget https://github.com/git-lfs/git-lfs/releases/download/v2.12.0/git-lfs-linux-amd64-v2.12.0.tar.gz
-RUN tar zxvf git-lfs-linux-amd64-v2.12.0.tar.gz
+RUN wget https://github.com/git-lfs/git-lfs/releases/download/v2.13.3/git-lfs-linux-arm64-v2.13.3.tar.gz
+RUN tar zxvf git-lfs-linux-arm64-v2.13.3.tar.gz
 RUN cp git-lfs $(git --exec-path)
 RUN ln -s $(git --exec-path)/git-lfs /usr/local/bin/git-lfs
 
