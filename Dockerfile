@@ -10,7 +10,9 @@ RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y gawk wget git-core diffstat unzip texinfo gcc-multilib \
         build-essential chrpath socat cpio python python3 python3-pip python3-pexpect \
         xz-utils debianutils iputils-ping libsdl1.2-dev xterm \
-        locales nano sudo tree curl
+        locales nano sudo tree curl \
+        python3-git python3-jinja2 libegl1-mesa pylint3 python3-subunit mesa-common-dev
+
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN mkdir git-lfs
